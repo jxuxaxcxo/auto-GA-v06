@@ -11,10 +11,10 @@ import uitesting.upb.org.managepage.BasePage;
  */
 public class Home extends BasePage {
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//*[@id=\"tsf\"]/div[2]/div/div[1]/div/div[1]/input")
     private WebElement searchTextField;
 
-    @FindBy(css = "")
+    @FindBy(xpath = "//*[@id=\"tsf\"]/div[2]/div/div[3]/center/input[1]")
     private WebElement searchButton;
 
     public Home searchText(String text){

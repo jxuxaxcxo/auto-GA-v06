@@ -18,4 +18,6 @@ public class Events {
     public static void fillField(WebElement searchTextField, String text) {
         searchTextField.sendKeys(text);
     }
+
+    public static void selectRow(WebElement table, String xpath){table.findElement(By.xpath(xpath)).isSelected();}
 }

@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import uitesting.upb.org.webdrivermanager.DriverManager;
 
-/**
- * @autor Marcelo Garay
- */
+
 public class Events {
     public static void click(WebElement webElement){
         webElement.click();

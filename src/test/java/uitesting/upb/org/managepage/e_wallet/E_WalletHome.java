@@ -6,9 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import uitesting.upb.org.manageevents.Events;
 import uitesting.upb.org.managepage.BasePage;
 
-/**
- * @autor Marcelo Garay
- */
+
+
 public class E_WalletHome extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"name\"]")
@@ -55,6 +54,7 @@ public class E_WalletHome extends BasePage {
 
         return this;
     }
+
 
     public void seeAccountDetails(){
         selectAccountFromTable();

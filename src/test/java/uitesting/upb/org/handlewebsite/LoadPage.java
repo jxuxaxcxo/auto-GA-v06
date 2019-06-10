@@ -37,9 +37,16 @@ public class LoadPage {
 
 
     public static void main(String[] args) {
-            NasaHome nasaPage = loadNasaHome().clickAPIListingButton().clickAPIListingButton().clickEarthButton().clickImageryButton();
+//            NasaHome nasaPage = loadNasaHome().clickAPIListingButton().clickAPIListingButton().clickEarthButton().clickImageryButton();
+//
+//            System.out.println(nasaPage.getText());
 
-            System.out.println(nasaPage.getText());
+        loadE_WalletHome().fillAccountDataAndAddAccount("Cuenta 1","Cuenta de Trabajo");
+        loadE_WalletHome().fillAccountDataAndAddAccount("Cuenta 2","Cuenta de Familia");
+        loadE_WalletHome().fillAccountDataAndAddAccount("Cuenta 3","Cuenta de Inversiones");
+
+
+
     }
 
 

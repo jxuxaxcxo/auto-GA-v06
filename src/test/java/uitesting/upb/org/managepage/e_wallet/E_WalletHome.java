@@ -19,21 +19,34 @@ public class E_WalletHome extends BasePage {
     @FindBy(xpath = "//*[@id=\"buttonAdd\"]")
     private WebElement addAccountButton;
 
-    @FindBy(xpath = "//*[@id=\"__BVID__35\"]")
-    private WebElement accountsTable;
+    @FindBy(xpath = "//*[@id=\"__BVID__12\"]/tbody/tr/td[1]")
+    private WebElement tableCell;
+
+    @FindBy(xpath = "//*[@id=\"buttonDetail\"]" )
+    private WebElement detailButton;
+
+    public void fillAccountName(String name){
+        Events.fillField(accountName,name);
+    }
+
+    public void fillAccountDescription(String description){
+        Events.fillField(accountDescription,description);
+    }
 
     public E_WalletHome accountNameAndDescription(String text1, String text2){
-        Events.fillField(accountName, text1);
 
+        this.fillAccountName(text1);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Events.fillField(accountDescription, text2);
+
+        this.fillAccountDescription(text2);
 
         return this;
     }
+
 
     public void clickAddAccountButton(){
         try {
@@ -44,10 +57,8 @@ public class E_WalletHome extends BasePage {
         Events.click(addAccountButton);
     }
 
-    public void selectAccountFromTable(){
-        Events.selectRow(accountsTable,"//*[@id=\"__BVID__35\"]/tbody/tr");
-    }
-    public void clickDetailButton(){Events.click(addAccountButton);}
+    public void selectAccountFromTable(){ Events.click(tableCell); }
+    public void clickDetailButton(){Events.click(detailButton);}
 
     public E_WalletHome fillAccountDataAndAddAccount(String accountName, String accountDescription){
         accountNameAndDescription(accountName,accountDescription).clickAddAccountButton();

@@ -58,7 +58,8 @@ public class E_WalletHome extends BasePage {
     }
 
     public void selectAccountFromTable(){ Events.click(tableCell); }
-    public void clickDetailButton(){Events.click(detailButton);}
+    public void clickDetailButton(){
+        Events.click(detailButton);}
 
     public E_WalletHome fillAccountDataAndAddAccount(String accountName, String accountDescription){
         accountNameAndDescription(accountName,accountDescription).clickAddAccountButton();
